@@ -1,9 +1,16 @@
 const express = require('express');
-const control = require('../controllers/controller');
+const artistRoutes = require('./artists');
+const countryRoutes = require('./countries');
+const playlistRoutes = require('./playlists');
+const trackRoutes = require('./tracks');
+const metricsRoutes = require('./metrics');
 
 const router = express.Router();
 
-// Example routes - candidates will need to adjust these based on their schema design
-router.get('/data', control.getData);
+router.use('/artists', artistRoutes);
+router.use('/countries', countryRoutes);
+router.use('/playlists', playlistRoutes);
+router.use('/tracks', trackRoutes);
+router.use('/metrics', metricsRoutes);
 
 module.exports = router;

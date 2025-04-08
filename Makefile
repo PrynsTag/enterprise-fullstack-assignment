@@ -21,9 +21,9 @@ help:
 # Pull the latest images
 pull:
 	@echo "Pulling latest Docker images..."
-	@docker pull jiwonjoung/chartmetric-assignment:frontend
-	@docker pull jiwonjoung/chartmetric-assignment:backend
-	@docker pull jiwonjoung/chartmetric-assignment:database
+	@docker pull jiwonjoung/chartmetric-assignment:frontend --platform linux/arm64/v8
+	@docker pull jiwonjoung/chartmetric-assignment:backend --platform linux/arm64/v8
+	@docker pull jiwonjoung/chartmetric-assignment:database --platform linux/arm64/v8
 	@echo "All images pulled successfully."
 
 # Start all services
